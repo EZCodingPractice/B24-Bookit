@@ -21,12 +21,14 @@ public class Environment {
         static {
 
             Properties properties = null;
-            String environment = System.getProperty("environment") != null ? environment = System.getProperty("environment") : ConfigurationReader.getProperty("environment");
+            String environment = System.getProperty("environment") != null ? environment =
+                    System.getProperty("environment") : ConfigurationReader.getProperty("environment");
             //String environment = ConfigurationReader.get("environment");
 
             try {
 
-                String path = System.getProperty("user.dir") + "/src/test/resources/env/" + environment + ".properties";
+                String path = System.getProperty("user.dir") + "/src/test/resources/env/" +
+                        environment + ".properties";
 
                 FileInputStream input = new FileInputStream(path);
                 properties = new Properties();
